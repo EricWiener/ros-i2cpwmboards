@@ -176,8 +176,11 @@
 #include <sys/ioctl.h>
 #include <sys/types.h>
 #include <sys/stat.h>
-#include <linux/i2c-dev.h>
 
+#include <linux/i2c-dev.h>
+extern "C" {
+#include <i2c/smbus.h>
+}
 #include <ros/ros.h>
 #include <ros/console.h>
 
@@ -200,7 +203,6 @@
 #include "i2cpwm_board/PositionArray.h"
 // request/response of the integer parameter services
 #include "i2cpwm_board/IntValue.h"
-
 
 /// @cond PRIVATE_NO_PUBLIC DOC
 
